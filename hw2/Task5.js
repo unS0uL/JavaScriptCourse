@@ -7,7 +7,7 @@ function factorial(num) {
     for (num; num !== 0;) {
         calcFactorial *= num--;
     }
-    return console.log(calcFactorial);
+    return console.log('Factorial of number: ' + calcFactorial);
 }
 
 module.exports = factorial;
