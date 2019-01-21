@@ -7,14 +7,18 @@
 function negativeFilter(input) {
     let arrPositive = [];
     input.forEach(function (item) {
-        (item > 0) ? arrPositive.push(item) : null;
+        if (item > 0) arrPositive.push(item);
     });
     return console.log(arrPositive);
 }
 
 function isPositive(input) {
     input.forEach(function (item) {
-        (item > 0) ? console.log(item + ' is a positive number. TRUE') : console.log(item + ' is a negative number. FALSE');
+        if (item > 0) {
+            console.log(item + ' is a positive number. TRUE');
+        } else {
+            console.log(item + ' is a negative number. FALSE');
+        }
     });
 }
 
