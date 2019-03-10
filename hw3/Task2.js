@@ -3,20 +3,21 @@
  * @param {Array<number>} input
  * @returns {Array<number>} Returns filtered array.
  */
+
 function advancedFilter(input) {
-    var sortFilter = input.filter(function(num) {
-        if (num > 0 && num < 10) {
-            return num;
-        }
-    });
-    return console.log(sortFilter);
+    let arr2 = [];
+    for (let i = 0; i < input.length; i++) {
+        if (isNumberInRange(input[i]))
+        arr2.push(input[i]);
+    }
+    return arr2;
 }
 
 function isNumberInRange(input) {
-
+   return input > 0 && input < 10;
 }
 
 module.exports = advancedFilter;
 
-arr = [1, -2 ,3 ,4 ,5 ,-6 ,-7 ,8, 9, 11, 12, 13, 14];
-advancedFilter(arr);
+let arr = [1, -2 ,3 ,4 ,5 ,-6 ,-7 ,8, 9, 11, 12, 13, 14];
+console.log(advancedFilter(arr));
