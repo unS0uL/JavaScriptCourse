@@ -6,8 +6,8 @@
  */
 
 const commonDevisor = (num1, num2) => {
-    minNum = 0;
-    devisor = 0;
+    let minNum = 0;
+    let devisor = 0;
     num1 < num2 ? minNum = num1 : minNum = num2;
     for (let i = 0; i < minNum; i++){
         if (num1 % i === 0 && num2 % i === 0) {
