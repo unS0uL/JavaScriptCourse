@@ -4,12 +4,11 @@
  * @returns {Array<number>} Returns filtered array.
  */
 const advancedFilter = (input) => {
-    let arr2 = input.filter(function(digit, i) {
+    return input.filter(function (digit, i) {
         if (((digit % 3) && (digit % 5) === 0) || (digit % 7 === 0)) {
             return input[i];
         }
     });
-    return arr2;
 };
 
 module.exports = advancedFilter;
