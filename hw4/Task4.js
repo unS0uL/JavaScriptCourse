@@ -5,11 +5,21 @@
  * @returns {number} Returns filtered array.
  */
 const maxMin = (input, order = true) => {
-        input.forEach(function(item, i) {
+    let lowHighVal = 1;
+        input.forEach(function(item) {
             if (order) {
-                if (item < input[i++])
+                // lowHighVal = 0;
+                if (lowHighVal < item ) {
+                    lowHighVal = item;
+                }
+            } else {
+                // lowHighVal = 1;
+                if (item < lowHighVal) {
+                    lowHighVal = item;
+                }
+            }
         });
-     return;
+     return lowHighVal;
 };
 
 module.exports = maxMin;
